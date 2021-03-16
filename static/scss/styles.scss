@@ -1,0 +1,55 @@
+.flex-row {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto;
+
+    .flex-item {
+        flex-basis:20%;
+        margin:10px;
+    }
+}
+
+.panel {
+    border:1px rgb(167, 167, 167) solid;
+    border-radius: 7px;
+    padding:5px;
+
+    .panel-heading {
+        background-color: #ccc;
+        margin:-5px;
+        padding:5px;
+    }
+
+    .panel-body {
+        margin:5px;
+    }
+
+    a {
+        text-decoration: none;
+        color:black;
+    }
+}
+
+.panel-clickable:hover {    
+    background-color: #add9ffb0;
+
+    .panel-heading {
+        background-color: #a7b5ca;
+    }
+}
+
+.post {
+    width:100%;
+    margin: 20px auto;
+    padding: 0px 50px;
+}
+
+.sub-panel {
+    margin:20px;   
+}
+
+.header {
+    text-align: center;
+}

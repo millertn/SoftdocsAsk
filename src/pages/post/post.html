@@ -1,0 +1,41 @@
+
+<template bindable="router">
+    <a class="btn btn-default" route-href="route: home;">Back</a>
+    <div class="post">
+        <div class="panel">
+            <div class="panel-heading">${postData.title}</div>
+            <div class="panel-body">${postData.body}</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Author</h2>
+                    <div class="panel sub-panel panel-clickable">
+                        <a route-href="route: author; params.bind:{id:author.id, postId:postData.id}">
+                        <div class="panel-heading">${author.name}</div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>${author.email}</li>
+                                <li>${author.phone}</li>
+                                <li>${author.company.name}</li>
+                                <li>${author.address.street} ${author.address.suite} ${author.address.city}, ${author.address.zipcode}</li>
+                            </ul>    
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Comments</h2>
+                    <ol>
+                        <li class="comment" repeat.for="comment of comments"> 
+                            <div class="panel sub-panel">
+                                <div class="panel-heading">${comment.name}, ${comment.email}</div>
+                                <div class="panel-body">
+                                    ${comment.body}
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

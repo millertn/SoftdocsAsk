@@ -1,0 +1,19 @@
+
+<template bindable="router">
+    <a class="btn btn-default" route-href="route: post; params.bind:{id: postId}">Back</a>
+    <div class="post">
+        <div class="panel">
+            <div class="panel-heading">${author.name}, ${author.username} (${author.id})</div>
+            <div class="panel-body">
+                <ul>
+                    <li>${author.email}</li>
+                    <li>${author.phone}</li>
+                    <li>${author.website}</li>
+                    <li>${author.company.name}: ${author.company.catchphrase}, ${author.company.bs}</li>
+                    <li>${author.address.street} ${author.address.suite} ${author.address.city}, ${author.address.zipcode}</li>
+                    <li>${author.address.geo.lat}, ${author.address.geo.lng}</li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+</template>

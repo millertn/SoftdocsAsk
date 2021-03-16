@@ -1,0 +1,14 @@
+
+<template bindable="router">
+    <h2 class="header">Welcome to the blog site, click on a blog post to learn more!</h2>
+    <div class="flex-row">
+        <!-- <a class="post"> -->
+            <div repeat.for="post of posts" class="panel panel-clickable flex-item">
+                <a route-href="route: post; params.bind: { id: post.id }">
+                    <div class="panel-heading">${post.title}</div>
+                    <div class="panel-body">${post.body}</div>
+                </a>
+            </div>
+        <!-- </a> -->
+    </div>
+</template>
